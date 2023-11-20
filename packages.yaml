@@ -1,0 +1,22 @@
+---
+image: pvstodghill/pipeline-pirate
+version: 2023-11-20
+commands:
+  - FastTree
+  - FastTreeMP
+  - PIRATE
+  - PIRATE_to_Rtab.pl
+  - PIRATE_to_roary.pl
+  - analyse_blast_outputs.pl
+  - analyse_loci_list.pl
+  - annotate_treeWAS_output.pl
+  - clipkit
+  - convert_to_distmat.pl
+  - convert_to_treeWAS.pl
+  - create_pangenome_alignment_aa.pl
+  - pangenome_variants_to_treeWAS.pl
+  - paralogs_to_Rtab.pl
+  - select_representative
+  - subsample_outputs.pl
+  - subset_alignments.pl
+  - unique_sequences.pl
