@@ -4,8 +4,8 @@
 
 # ------------------------------------------------------------------------
 
-GENOMES_DIR=/.../data/6_final
-GENOMES_EXT=.gff+fna
+COLLECTION=../*collection/data
+GFF_EXT=.gff
 
 # # Genomes to remove before processing
 # OUTGROUPS=

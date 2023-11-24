@@ -23,13 +23,15 @@ echo 1>&2 "# Collecting input files..."
 rm -rf ${INPUTS}
 mkdir -p ${INPUTS}
 
-if [ -z ${GENOMES_EXT} ] ; then
-    GENOMES_EXT=.gff+fna
+if [ -z ${GFF_EXT} ] ; then
+    GFF_EXT=.gff
 fi
 
+GENOMES_DIR=${COLLECTION}/genomes
+
 fasta_notice=
-for f in ${GENOMES_DIR}/*${GENOMES_EXT} ; do
-    name="$(basename "$f" ${GENOMES_EXT})"
+for f in ${GENOMES_DIR}/*${GFF_EXT} ; do
+    name="$(basename "$f" ${GFF_EXT})"
     cp --archive "$f" ${INPUTS}/"$name".gff
     if ( egrep -ls '^##FASTA' ${INPUTS}/"$name".gff ) ; then
 	: nothing - gff already includes .fna
