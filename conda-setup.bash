@@ -43,7 +43,7 @@ if [ ! -d ${CONDA_PREFIX}/envs/${NAME} ] ; then
 fi
 __ conda activate ${NAME}
 
-__ $_conda $_install -y pirate mcl=14.137
-__ $_conda $_install -y ${PACKAGES}
+__ $_conda $_install -c conda-forge -c bioconda -y pirate mcl=14.137
+__ $_conda $_install -c conda-forge -c bioconda -y ${PACKAGES}
 
 # __ pip $_install FIXME
